@@ -5,7 +5,7 @@
 #### the createFile.sh was created to make life easier for those who have to write and create several files {.hpp and .cpp}
 #### creates a basic header with defines for constructors and destructors
 #### also creates the cpp file with the base
-#### very useful for those who have several files
+#### very useful for those who are going to create several files.
 
 ## How to use
 
