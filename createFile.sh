@@ -2,6 +2,11 @@
 
 upperCase=$(echo "$1" | tr '[:lower:]' '[:upper:]')
 
+# Colors codes
+greenColor="\033[0;32m"
+redColor="\033[0;31m"
+defaultColor="\033[1;37m"
+
 default="DEFAULT_CONSTRUCTOR_${upperCase}"
 defaultMensage="\"Default Constructor $1 Called\""
 constructor="CONSTRUCTOR_${upperCase}"
@@ -61,12 +66,13 @@ createFileCpp()
 }
 
 if [ -f "$1.hpp" ] && [ -f "$1.cpp" ] ; then
-	echo "There is already a file with this name: $1.hpp $1.cpp"
+	echo "${redColor}There is already a file with this name: ${defaultColor}$1.hpp $1.cpp"
 elif [ -f "$1.hpp" ] ; then
-	echo "There is already a file with this name: $1.hpp"
+	echo "${redColor}There is already a file with this name: ${defaultColor}$1.hpp"
 elif [ -f "$1.cpp" ] ; then
-	echo "There is already a file with this name: $1.cpp"
+	echo "${redColor}There is already a file with this name: ${defaultColor}$1.cpp"
 else
 	createFileHpp $1
 	createFileCpp $1
+	echo "${defaultColor}$1.cpp ${greenColor}and ${defaultColor}$1.hpp ${greenColor}file created successfully!${defaultColor}"
 fi
