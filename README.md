@@ -1,24 +1,25 @@
-# createFileBase
+This script automates the creation of C++ header (.hpp) and source (.cpp) files based on user input. It can also generate a basic Makefile for the project.
 
-## Resume
+Features:
 
-#### The createFile.sh was created to make life easier for those who have to write and create several files {.hpp and .cpp}
-#### creates a basic header with defines for constructors and destructors
-#### also creates the cpp file with the base
-#### very useful for those who are going to create several files.
+    Creates header and source files with basic class structure and constructors/destructors.
+    Supports options for creating files with custom names.
+    Generates a Makefile with basic build instructions.
 
-## How to use
+Usage:
 
-    sh createFile.sh [name of the file to be created]
+    Clone the repository and navigate to the script directory.
 
-## For Example
+    Run the script with the desired options:
+        ./createFile.sh -a: Create both header and source files.
+        ./createFile.sh -h: Create header file only.
+        ./createFile.sh -c: Create source file only.
+        ./createFile.sh -m: Create Makefile.
 
-    sh createFile.sh Book
+    Provide the name of the file to be created when prompted.
 
-### created the Book.hpp file
+    The script will generate the files in the current directory.
 
-![Book.hpp](https://github.com/i4b2c/createFileBase/assets/117470349/292e810b-b163-4ed4-ab29-e582e66102dd)
+Contributing:
 
-### create the Book.cpp file
-
-![Screenshot from 2024-02-12 16-42-30](https://github.com/i4b2c/createFileBase/assets/117470349/137f02e7-6509-4da1-99cb-9dde63bf58f5)
+If you find this script useful, please consider contributing to its development. You can report bugs, suggest improvements, or submit pull requests.
